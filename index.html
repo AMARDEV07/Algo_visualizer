@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav">
+      <ul class="simple">
+        <li>
+          <a href="index.html" aria-label="Sorting Visualizer Home">
+            <div class="warp-img">
+              <img src="images.png" alt="icon" class="icon" />
+            </div>
+            SORTING VISUALIZER
+          </a>
+        </li>
+        <li
+          class="hamburger"
+          onclick="showMenu()"
+          aria-label="Open Menu"
+          style="display: none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="28px"
+            viewBox="0 -960 960 960"
+            width="28px"
+            fill="#333"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            />
+          </svg>
+        </li>
+        <ul class="desktop">
+          <li class="dek-li"><a href="#home" aria-label="Home">Home</a></li>
+          <li class="dek-li">
+            <a href="Sorting/sorting.html" aria-label="Sorting">Sorting</a>
+          </li>
+          <li class="dek-li">
+            <a href="Searching/searching.html" aria-label="Searching"
+              >Searching</a
+            >
+          </li>
+          <li class="dek-li">
+            <a href="#explanation" aria-label="Explanation">Explanation</a>
+          </li>
+          <li class="dek-li">
+            <a href="#profile" aria-label="Profile">Profile</a>
+          </li>
+          <li class="dek-li"><a href="#about" aria-label="About">About</a></li>
+        </ul>
+      </ul>
+    </nav>
+
+    <!-- Sidebar (Mobile Only) -->
+    <div class="sidebar">
+      <button
+        class="close-sidebar"
+        onclick="closeSidebar()"
+        aria-label="Close Sidebar"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="32px"
+          viewBox="0 -960 960 960"
+          width="32px"
+          fill="#fff"
+        >
+          <path
+            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+          />
+        </svg>
+      </button>
+      <ul class="sidebar-links">
+        <li><a href="#home" aria-label="Home">Home</a></li>
+        <li><a href="Sorting/sorting.html" aria-label="Sorting">Sorting</a></li>
+        <li>
+          <a href="Searching/searching.html" aria-label="Searching"
+            >Searching</a
+          >
+        </li>
+        <li><a href="#explanation" aria-label="Explanation">Explanation</a></li>
+        <li><a href="#profile" aria-label="Profile">Profile</a></li>
+        <li><a href="#about" aria-label="About">About</a></li>
+      </ul>
+    </div>
+
+    <!-- Parallax Section (Home) -->
+    <div class="rec-one"></div>
+    <div class="section1" id="home">
+      <div class="text">
+        <h1>Sorting</h1>
+        <span class="auto-type"></span>
+      </div>
+    </div>
+
+    <!-- Explanation Section -->
+    <div class="section3" id="explanation">
+      <div class="text">
+        <h1>Understanding Algorithms</h1>
+        <p>
+          Algorithms are fundamental to computer science, enabling efficient
+          data organization and retrieval. Sorting algorithms arrange data in a
+          specific order, while searching algorithms locate specific elements.
+          Below, we explore key sorting and searching algorithms with
+          visualizations to enhance understanding.
+        </p>
+
+        <h2>Sorting Algorithms</h2>
+        <div
+          class="algorithm-card"
+          style="
+            background-image: url('https://imgs.search.brave.com/IUJgLSdJk7gGkiXhsjoevQ4vNnhfh-UgE6s-zuLF3xE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTA3/MTEwNDczNC9waG90/by93b21hbi1zaWxo/b3VldHRlLWF0LXN1/bnNldC1vbi1oaWxs/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz0zUHJDSGNsdFM0/VHR4VVhIeFQ5ckxY/ckcxNTRMcGY3MEJO/RFFma3lzUm5RPQ');
+          "
+        >
+          <div class="card-content">
+            <h3>Bubble Sort</h3>
+            <p>
+              Bubble Sort is a simple comparison-based algorithm that repeatedly
+              steps through the list, compares adjacent elements, and swaps them
+              if they are in the wrong order. The process continues until no
+              swaps are needed, indicating a sorted list.
+            </p>
+            <ul>
+              <li>
+                <strong>Time Complexity</strong>: O(n²) in worst and average
+                cases, O(n) in best case (nearly sorted).
+              </li>
+              <li><strong>Space Complexity</strong>: O(1), sorts in-place.</li>
+              <li>
+                <strong>Stability</strong>: Stable, preserves order of equal
+                elements.
+              </li>
+              <li>
+                <strong>Use Cases</strong>: Educational purposes, small
+                datasets, or when simplicity is prioritized.
+              </li>
+            </ul>
+            <p>
+              While inefficient for large datasets, Bubble Sort’s
+              straightforward logic makes it ideal for teaching sorting
+              concepts.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="algorithm-card"
+          style="
+            background-image: url('https://via.placeholder.com/600x400?text=Insertion+Sort+Visualization');
+          "
+        >
+          <div class="card-content">
+            <h3>Insertion Sort</h3>
+            <p>
+              Insertion Sort builds a sorted array one element at a time by
+              repeatedly taking the next element and inserting it into the
+              correct position in the already sorted portion of the array.
+            </p>
+            <ul>
+              <li>
+                <strong>Time Complexity</strong>: O(n²) in worst and average
+                cases, O(n) in best case (nearly sorted).
+              </li>
+              <li><strong>Space Complexity</strong>: O(1), sorts in-place.</li>
+              <li>
+                <strong>Stability</strong>: Stable, maintains order of equal
+                elements.
+              </li>
+              <li>
+                <strong>Use Cases</strong>: Small datasets, nearly sorted data,
+                or as part of hybrid algorithms (e.g., Timsort).
+              </li>
+            </ul>
+            <p>
+              Insertion Sort is efficient for small or nearly sorted datasets
+              and is often used in practice for its simplicity and low overhead.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="algorithm-card"
+          style="
+            background-image: url('https://via.placeholder.com/600x400?text=Selection+Sort+Visualization');
+          "
+        >
+          <div class="card-content">
+            <h3>Selection Sort</h3>
+            <p>
+              Selection Sort divides the array into sorted and unsorted
+              portions, repeatedly selecting the smallest (or largest) element
+              from the unsorted portion and placing it at the end of the sorted
+              portion.
+            </p>
+            <ul>
+              <li>
+                <strong>Time Complexity</strong>: O(n²) in all cases due to
+                scanning the entire unsorted portion.
+              </li>
+              <li><strong>Space Complexity</strong>: O(1), sorts in-place.</li>
+              <li>
+                <strong>Stability</strong>: Not stable, may swap equal elements.
+              </li>
+              <li>
+                <strong>Use Cases</strong>: Small datasets or when minimizing
+                swaps is important.
+              </li>
+            </ul>
+            <p>
+              Selection Sort is simple but inefficient for large datasets,
+              making it suitable for educational purposes or specific scenarios
+              with few swaps.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="algorithm-card"
+          style="
+            background-image: url('https://via.placeholder.com/600x400?text=Merge+Sort+Visualization');
+          "
+        >
+          <div class="card-content">
+            <h3>Merge Sort</h3>
+            <p>
+              Merge Sort is a divide-and-conquer algorithm that recursively
+              divides the array into two halves, sorts each half, and merges the
+              sorted halves to produce a fully sorted array.
+            </p>
+            <ul>
+              <li>
+                <strong>Time Complexity</strong>: O(n log n) in all cases due to
+                consistent division and merging.
+              </li>
+              <li>
+                <strong>Space Complexity</strong>: O(n) for temporary arrays
+                used in merging.
+              </li>
+              <li>
+                <strong>Stability</strong>: Stable, maintains order of equal
+                elements.
+              </li>
+              <li>
+                <strong>Use Cases</strong>: Large datasets, linked lists,
+                external sorting, or when stability is required.
+              </li>
+            </ul>
+            <p>
+              Merge Sort’s predictable performance and stability make it ideal
+              for large-scale sorting tasks, though it requires extra memory.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="algorithm-card"
+          style="
+            background-image: url('https://via.placeholder.com/600x400?text=Quick+Sort+Visualization');
+          "
+        >
+          <div class="card-content">
+            <h3>Quick Sort</h3>
+            <p>
+              Quick Sort is a divide-and-conquer algorithm that selects a pivot,
+              partitions the array around it, and recursively sorts the
+              subarrays. Its performance depends on pivot choice.
+            </p>
+            <ul>
+              <li>
+                <strong>Time Complexity</strong>: O(n log n) on average, O(n²)
+                in worst case (e.g., sorted array with poor pivot).
+              </li>
+              <li>
+                <strong>Space Complexity</strong>: O(log n) for recursion stack,
+                sorts in-place.
+              </li>
+              <li>
+                <strong>Stability</strong>: Not stable, may reorder equal
+                elements.
+              </li>
+              <li>
+                <strong>Use Cases</strong>: General-purpose sorting, large
+                datasets, or when memory is limited.
+              </li>
+            </ul>
+            <p>
+              Quick Sort’s speed and in-place sorting make it a popular choice,
+              especially with optimized pivot selection (e.g., median-of-three).
+            </p>
+          </div>
+        </div>
+
+        <h2>Searching Algorithms</h2>
+        <div
+          class="algorithm-card"
+          style="
+            background-image: url('https://via.placeholder.com/600x400?text=Linear+Search+Visualization');
+          "
+        >
+          <div class="card-content">
+            <h3>Linear Search</h3>
+            <p>
+              Linear Search sequentially checks each element in the list until
+              the target element is found or the list is exhausted.
+            </p>
+            <ul>
+              <li>
+                <strong>Time Complexity</strong>: O(n) in worst and average
+                cases, O(1) in best case (target at start).
+              </li>
+              <li>
+                <strong>Space Complexity</strong>: O(1), requires no extra
+                space.
+              </li>
+              <li>
+                <strong>Prerequisites</strong>: Works on sorted or unsorted
+                data.
+              </li>
+              <li>
+                <strong>Use Cases</strong>: Small datasets, unsorted lists, or
+                when simplicity is needed.
+              </li>
+            </ul>
+            <p>
+              Linear Search is straightforward but inefficient for large
+              datasets, making it suitable for small or unsorted lists.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="algorithm-card"
+          style="
+            background-image: url('https://via.placeholder.com/600x400?text=Binary+Search+Visualization');
+          "
+        >
+          <div class="card-content">
+            <h3>Binary Search</h3>
+            <p>
+              Binary Search repeatedly divides a sorted array in half, comparing
+              the middle element to the target and discarding the half that
+              cannot contain the target.
+            </p>
+            <ul>
+              <li>
+                <strong>Time Complexity</strong>: O(log n) in worst and average
+                cases, O(1) in best case (target at middle).
+              </li>
+              <li>
+                <strong>Space Complexity</strong>: O(1) for iterative version,
+                O(log n) for recursive version.
+              </li>
+              <li><strong>Prerequisites</strong>: Requires sorted data.</li>
+              <li>
+                <strong>Use Cases</strong>: Large sorted datasets, such as in
+                databases or search systems.
+              </li>
+            </ul>
+            <p>
+              Binary Search is highly efficient for large sorted datasets, but
+              its requirement for sorted data means preprocessing may be needed.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          Our Sorting Visualizer animates these algorithms step-by-step, helping
+          you understand their logic and compare their efficiency. Explore these
+          visualizations to deepen your algorithmic knowledge!
+        </p>
+      </div>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="section5" id="profile">
+      <div class="text">
+        <h1>Meet the Founder</h1>
+        <div
+          class="profile-card"
+          style="
+            background-image: url('https://via.placeholder.com/600x400?text=Amardev+Portrait');
+          "
+        >
+          <div class="card-content">
+            <h2>Amardev Panwar</h2>
+            <p><strong>Role</strong>: BCA Student & Fullstack Developer</p>
+            <p>
+              <strong>Bio</strong>: Amardev Panwar is a dedicated BCA student
+              and fullstack developer with a passion for building educational
+              tools that simplify complex concepts. With expertise in web
+              development and a keen interest in algorithms, Amardev created
+              Sorting Visualizer to inspire learners and developers to explore
+              computer science interactively.
+            </p>
+            <p>
+              <strong>Skills</strong>: JavaScript, HTML5, CSS3, Node.js, React,
+              Algorithm Design, UI/UX Design
+            </p>
+            <p>
+              <strong>Contact</strong>:
+              <a
+                href="/cdn-cgi/l/email-protection#7d1c101c0f19180b530d1c130a1c0f3d18051c100d1118531e1210"
+                ><span
+                  class="__cf_email__"
+                  data-cfemail="9dbcb0bcafb9b8abf3adbcb3aabcaf9db8a5bcb0adb1b8f3beb2b0"
+                  >[email&#160;protected]</span
+                ></a
+              >
+              |
+              <a href="https://github.com/amardevpanwar" target="_blank"
+                >GitHub</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="section4" id="about">
+      <div class="text">
+        <h1>About Sorting Visualizer</h1>
+        <p>
+          The Sorting Visualizer is an educational web application designed to
+          make learning algorithms intuitive and engaging. Our goal is to bridge
+          the gap between theoretical computer science and practical
+          understanding by providing a platform where users can interact with
+          sorting and searching algorithms in real-time.
+        </p>
+        <p>
+          Built using modern web technologies like HTML5, CSS3, JavaScript, and
+          libraries such as Typed.js, this project showcases the power of web
+          development in creating interactive learning tools. The responsive
+          design ensures accessibility across devices, from mobile phones to
+          desktops.
+        </p>
+        <p>
+          Created by Amardev Panwar and a team of passionate contributors, this
+          project reflects our commitment to open-source education. We welcome
+          feedback, contributions, and ideas to enhance the platform. Connect
+          with us via GitHub or contact us to share your thoughts!
+        </p>
+        <p>
+          Explore, learn, and enjoy the beauty of algorithms with Sorting
+          Visualizer!
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>© 2025 Sorting Visualizer. All rights reserved.</p>
+        <p>
+          Built with passion by Amardev Panwar to make algorithms accessible and
+          engaging for everyone.
+        </p>
+        <div class="social-links">
+          <a
+            href="https://www.instagram.com/sortingvisualizer"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#fff"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.326 3.608 1.301.975.975 1.24 2.242 1.301 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.326 2.633-1.301 3.608-.975.975-2.242 1.24-3.608 1.301-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366 politely.062-2.633-.326-3.608-1.301-.975-.975-1.24-2.242-1.301-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.326-2.633 1.301-3.608.975.975 2.242-1.24 3.608-1.301 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.453.066-2.758.38-3.816 1.438-1.058 1.058-1.372 2.363-1.438 3.816-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.066 1.453.38 2.758 1.438 3.816 1.058 1.058 2.363 1.372 3.816 1.438 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.453-.066 2.758-.38 3.816-1.438 1.058-1.058 1.372-2.363 1.438-3.816.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.066-1.453-.38-2.758-1.438-3.816-1.058-1.058-2.363-1.372-3.816-1.438-1.28-.058-1.688-.072-4.947-.072z"
+              />
+              <path
+                d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998z"
+              />
+              <circle cx="18.406" cy="5.594" r="1.44" />
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/sortingvisualizer"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#fff"
+            >
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 5.013 3.693 9.153 8.505 9.876v-6.98h-2.55v-2.896h2.55v-2.208c0-2.518 1.498-3.908 3.784-3.908 1.094 0 2.238.195 2.238.195v2.46h-1.262c-1.242 0-1.628.771-1.628 1.563v1.898h2.773l-.443 2.896h-2.33v6.98C18.307 21.153 22 17.013 22 12c0-5.523-4.477-10-10-10z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/sortingvisualizer"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#fff"
+            >
+              <path
+                d="M19.998 3H4.002C3.449 3 3 3.449 3 4.002v15.996C3 20.551 3.449 21 4.002 21h15.996c.553 0 1.002-.449 1.002-1.002V4.002C21 3.449 20.551 3 19.998 3zM8.622 18.609h-2.84V9.766h2.84v8.843zM7.203 8.484c-.91 0-1.648-.738-1.648-1.647 0-.91.738-1.648 1.648-1.648.91 0 1.648.738 1.648 1.648 0 .909-.738 1.647-1.648 1.647zm11.406 10.125h-2.84v-4.688c0-1.119-.022-2.559-1.559-2.559-1.559 0-1.797 1.219-1.797 2.477v4.77h-2.84V9.766h2.725v1.203h.038c.38-.719 1.309-1.477 2.694-1.477 2.878 0 3.406 1.898 3.406 4.367v4.75z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cloudflare Script -->
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'93573dc7087c6789',t:'MTc0NTUxNDkxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'93d609fe6b3944e2',t:'MTc0Njg0NDQ4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
