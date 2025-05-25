@@ -28,12 +28,6 @@ A simple and interactive **Algorithm Visualizer** built using HTML, CSS, and Jav
 
 ---
 
-## 🖼️ Preview
-
-![Algorithm Visualizer Screenshot](images.png)
-
----
-
 ## 🛠️ Technologies Used
 
 - **HTML5** – Markup structure of the web page
